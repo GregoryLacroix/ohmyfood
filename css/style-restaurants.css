@@ -143,10 +143,6 @@ body{
     margin-bottom: var(--spacing-xl);
 }
 
-.menu__item__title{
-    margin-bottom: var(--spacing-xxs);
-}
-
 .menu__title__hilight{
     width: var(--hr-width);
     border: 2px solid var(--border-hr-color);
@@ -158,6 +154,10 @@ body{
     font-size: var(--subtitle-font-size);
     font-weight: var(--font-weight-md);
     position: relative;
+    margin-bottom: var(--spacing-xxs);
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .menu__txt{
