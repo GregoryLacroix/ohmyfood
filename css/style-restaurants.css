@@ -77,7 +77,7 @@ body{
     display: flex;
     align-items: center;
     box-shadow: 0px 2px 4px 0px #00000026;
-    z-index: 2000;
+    /* z-index: 1000; */
     position: relative;
     padding: var(--spacing-md);
 }
@@ -97,7 +97,7 @@ body{
     height: var(--height-picuture-sm);
     object-fit: cover;
     position: absolute;
-    z-index: -1;
+    /* z-index: -1000; */
     top: calc(var(--logo-height) + (2 *  var(--spacing-md)));
     left: 0;
 }
@@ -125,18 +125,35 @@ body{
 
 .card__icone{
     position: relative;
+    overflow: hidden;
+    height: 23px;
+    z-index: 2;
+}
+
+.card__icone__default{
+    overflow: hidden;
+    position: relative;
+    cursor: pointer;
+    z-index: 3;
 }
 
 .card__icone__active{
+    overflow: hidden;
     position: absolute;
     right: 0;
-    opacity: 0;
+    bottom: -25px;
+    left: 1px;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    -o-transition: all 1s;
     transition: all 1s;
+    width: 100%;
+    z-index: 1;
 }
 
-.card__icone__active:hover{
+.card__icone:last-child:hover .card__icone__active{
+    transform: translateY(-24px);
     cursor: pointer;
-    opacity: 1;
 }
 
 .menu{
